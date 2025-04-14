@@ -1,10 +1,12 @@
 import  mongoose from "mongoose"
-const URI = "mongodb+srv://03rivetmoseys:LevYTIf6dTuWDUGC@dummycluster.namox.mongodb.net/dummy"
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 async function  connect(){
 
     try{
-        await mongoose.connect(URI)
+        await mongoose.connect(process.env.MONGODB_URI)
         console.log("Connected Successfully to MongoDb server");
     }catch(error){
         console.log(`Error encountered - ${error}`);

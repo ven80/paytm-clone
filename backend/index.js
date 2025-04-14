@@ -14,7 +14,7 @@ app.use("/api/v1", rootRouter)
 
 
 app.listen(PORT, ()=>{
-    console.log("Listening @3000");
+    console.log("Listening");
 })
 
 
